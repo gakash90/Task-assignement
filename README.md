@@ -80,13 +80,6 @@ Start all services (frontend, backend, MongoDB) with Docker Compose:
 
 ---
 
-## Video Demonstration
-
-A video walkthrough demonstrating signup/login, task creation, updating, deleting, and status changes is available here:  
-[Insert your video link here]
-
----
-
 ## Time Spent and Trade-Offs
 
 - Approximately 2-3 hours to develop the full-stack application.  
