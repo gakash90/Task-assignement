@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Mini Task Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+Mini Task Manager is a streamlined full-stack task management application where users can sign up, log in, and manage their personal tasks. Each task has a title, description, and a status (not started, pending, completed). The backend uses JWT-based authentication with data persistence in MongoDB. The frontend is developed with React, and the backend with Node.js and Express. The entire application is containerized using Docker, allowing for easy deployment and testing.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User sign up and login with JWT authentication  
+- Full CRUD (Create, Read, Update, Delete) for tasks  
+- Manage task statuses: not started, pending, completed  
+- Persistent authentication state across page refreshes  
+- Clear, simple UI with loading indicators and error handling  
+- Dockerized backend, frontend, and MongoDB for easy setup  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** React (functional components and hooks)  
+- **Backend:** Node.js, Express.js, JWT authentication  
+- **Database:** MongoDB (running in Docker container)  
+- **DevOps:** Docker, Docker Compose for container orchestration  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Docker and Docker Compose installed on your system  
+- Git to clone the repository
 
-### `npm run eject`
+### Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+git clone https://github.com/gakash90/Task-assignement.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup Environment Variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Copy the `.env.example` provided in both `frontend/` and `backend/` folders to `.env` and fill in the appropriate values.
 
-### Code Splitting
+Sample content for `backend/.env`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+MONGO_URI=mongodb://mongo:27017/taskdb
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
 
-### Analyzing the Bundle Size
+cd frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Sample content for `frontend/.env`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+REACT_APP_API_URL=http://localhost:5000
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Running the Application
 
-### Deployment
+Start all services (frontend, backend, MongoDB) with Docker Compose:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+- Frontend React app: [http://localhost:3000](http://localhost:3000)  
+- Backend API: [http://localhost:5000](http://localhost:5000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Usage
+
+1. Open the frontend URL in your web browser.  
+2. Sign up to create an account or log in with existing credentials.  
+3. Create tasks with title, description, and status.  
+4. Edit or delete tasks and update statuses seamlessly.  
+5. Authentication state is preserved on page reloads.
+
+---
+
+## Video Demonstration
+
+A video walkthrough demonstrating signup/login, task creation, updating, deleting, and status changes is available here:  
+[Insert your video link here]
+
+---
+
+## Time Spent and Trade-Offs
+
+- Approximately 2-3 hours to develop the full-stack application.  
+- Emphasis on clean, modular code and Docker-based setup.  
+- Basic UI prioritizing clarity and usability; can be enhanced with further styling.  
+- Basic error handling implemented; additional testing and UI polish remain possible improvements.
+
+---
+
+## License
+
+This project is licensed under the ISC License.
+
+---
+
+If you have any questions or need clarifications, feel free to contact me.
+
+---
+
+
